@@ -1,6 +1,9 @@
+{% extends 'portfolio/base_style.html' %}
+
+{% block content %}
+
 <center>
   <h1>Previously posted.</h1>
-  <a href="{% url 'home' %}"><h3>Home page</h3></a>
   <br>
   {% for project in projects %}
 
@@ -10,3 +13,5 @@
 
   {% endfor %}
 </center>
+
+{% endblock %}

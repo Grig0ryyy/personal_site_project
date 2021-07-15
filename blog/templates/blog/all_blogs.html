@@ -1,8 +1,11 @@
+{% extends 'portfolio/base_style.html' %}
+{% block content_button %}
+<a class="nav-link active" aria-current="page" href="{% url 'all_posts' %}">Previously posted</a>
+{% endblock %}
+{% block content %}
+
 <center>
   <h1>Gregory's blog.</h1>
-</center>
-  <a href="{% url 'home' %}"><h3>Home page</h3></a>
-<center>
   {% for project in projects %}
 
   <a href="{% url 'detail' project.id %}"><h2>{{ project.title }}</h2></a>
@@ -10,6 +13,6 @@
   <p>{{ project.description|striptags|truncatechars:100 }}<p>
 
   {% endfor %}
-  <br>
-  <a href="{% url 'all_posts' %}">Previously posted</a>
 </center>
+
+{% endblock %}

@@ -1,7 +1,10 @@
+{% extends 'portfolio/base_style.html' %}
+
+{% block content %}
+
 {% load static %}
 <center>
   <h1>Zabolotny Gregory website.</h1>
-  <a href="{% url 'all_blogs' %}"><h3>Blog</h3></a>
   <br>
   <img src="{% static 'portfolio/1PIg_SOmJ1g.jpg' %}" height=735 width=550>
   <br>
@@ -18,3 +21,5 @@
   {% endif %}
   {% endfor %}
 </center>
+
+{% endblock %}
