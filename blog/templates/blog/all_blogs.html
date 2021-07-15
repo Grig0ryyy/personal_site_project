@@ -1,13 +1,13 @@
 <center>
-  <h1>ITS A BLOG</h1>
-  <h1>Just a testing...</h1>
-  <br>
-
+  <h1>Gregory's blog.</h1>
+</center>
+  <a href="{% url 'home' %}"><h3>Home page</h3></a>
+<center>
   {% for project in projects %}
 
   <a href="{% url 'detail' project.id %}"><h2>{{ project.title }}</h2></a>
   <p>{{ project.data }}<p>
-  <p>{{ project.description }}<p>
+  <p>{{ project.description|striptags|truncatechars:100 }}<p>
 
   {% endfor %}
   <br>

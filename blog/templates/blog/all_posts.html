@@ -1,13 +1,12 @@
 <center>
-  <h1>Previously posted</h1>
-  <h1>Just a testing...</h1>
+  <h1>Previously posted.</h1>
+  <a href="{% url 'home' %}"><h3>Home page</h3></a>
   <br>
-
   {% for project in projects %}
 
   <a href="{% url 'detail' project.id %}"><h2>{{ project.title }}</h2></a>
   <p>{{ project.data }}<p>
-  <p>{{ project.description }}<p>
+  <p>{{ project.description|striptags|truncatechars:100 }}<p>
 
   {% endfor %}
 </center>
