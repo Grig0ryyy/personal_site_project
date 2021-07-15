@@ -1,3 +1,6 @@
 body {
   font-family: 'Nunito', sans-serif;
+  margin: 2%; /* Отступы вокруг элемента */
+  background: #fdffff; /* Цвет фона */
+  padding: 1px; /* Поля вокруг текста */
 }

@@ -18,15 +18,15 @@
     <title>Gregory's website</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fdffff;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">Home page</a>
+    <a class="navbar-brand" href="{% url 'home' %}"><button class="btn btn-primary" type="button"><h2>Home page</h2></button></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse text-center" id="navbarNav">
       <div class="navbar-nav ml-auto">
-        <a class="nav-link active" aria-current="page" href="{% url 'all_blogs' %}">Blog</a>
+        <a class="nav-link active" aria-current="page" href="{% url 'all_blogs' %}"><h3>Blog</h3></a>
         {% block content_button %}{% endblock %}
       </div>
     </div>
@@ -34,12 +34,14 @@
   <div class="d-flex flex-row-reverse bd-highlight">
     <div class="collapse navbar-collapse text-center" id="navbarNav">
       <div class="navbar-nav ml-auto">
-        <a class="nav-link active" aria-current="page" href="https://github.com/Grig0ryyy" target="_blank">GitHub</a>
-        <a class="nav-link active" aria-current="page" href="https://vk.com/ho4y_katany" target="_blank">VK</a>
+        <a class="nav-link active" aria-current="page" href="https://github.com/Grig0ryyy" target="_blank"><h4>GitHub</h4></a>
+        <a class="nav-link active" aria-current="page" href="https://vk.com/ho4y_katany" target="_blank"><h4>VK</h4></a>
       </div>
     </div>
   </div>
 </nav>
+<br>
+<br>
     {% block content %}{% endblock %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
